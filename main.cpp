@@ -13,17 +13,13 @@ main()
     int n;
     cin >> n;
     per person[n];
-    //per person1[n];
-
+    char b[n][20];
     int index[n];
 
     for(int i = 0;i < n;i++)
     {
         cin >> person[i].name;
-       // person1[i].name = person[i].name;
         cin >> person[i].number;
-       // person1[i].number = person[i].number;
-
         index[i] = i;
     }
 
@@ -32,13 +28,11 @@ main()
         clearing(person[i].name, sizeof(person[i].name));
     }
 
-
-
     selection_sort(person,n,0,index);
 
     for(int i = 0;i < n;i++)
     {
-        cout << person[index[i]].name << endl;
+        cout<<i+1<<"))" << person[index[i]].name << endl;
         cout << person[index[i]].number << endl;
     }
 
